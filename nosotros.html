@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - La biblioteca</title>
+     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+        <nav>
+        <header>
+  <img src="img/logobiblioteca.png" alt="Logo de la biblioteca" class="ImgLogo">  
+  <nav> 
+    <ul class="menu">
+      <li><a href="./index.html"><i class="fas fa-home"></i> Inicio</a></li>
+      <li><a href="libros.html">Libros</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="dudas.html">Dudas</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <main>
+        <h2>Nosotros</h2>
+        <hr>
+        <p>
+            En La biblioteca creemos que fomentar el hábito de la lectura en las personas desde una edad temprana aporta beneficios en su crecimiento y favorece su desarrollo personal e intelectual.
+            
+            Leer es construir sentido, encontrar significados, ampliar la imaginación, descubrir palabras, generar vínculos, desarrollar capacidad de comprensión e interpretación.
+           
+            Regalá libros. Regalá imaginación
+        </p>
+
+        <section class="seccion">
+            <h2>Formulario para consultas</h2>
+            <form action="https://formspree.io/f/mnnpeepv" method="POST">
+                <label for="nombre">Nombre:</label>
+                <br>
+                <input type="texto" name="Nombre" id="nombre" placeholder="Ingrese su nombre:" required>
+                <br>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" name="Email" id="email" placeholder="Ingrese su email:" required>
+                <br>
+                <label for="instagram">Instagram: (opcional)</label>
+                <br>
+                <input type="texto" name="instagram" id="instagram" placeholder="Ingrese su usuario:" required>
+                <br>
+                <label for="opciones">Consulta:</label>
+                <br>
+                <select name="opciones"> 
+                    <option value="opcion1">Pedido personalizado</option> 
+                    <option value="opcion2">Problemas con el envío</option>
+                    <option value="opcion3">Punto de retiro</option> 
+                    <option value="opcion4">Otro</option> 
+                </select>
+                <br>
+                <label for="consulta">Consulta:</label>
+                <br>
+                <textarea name="Consulta:" rows="5" cols="30" placeholder="Escriba aquí su consulta" required></textarea>
+                <br>
+                <input type="submit" name="Submit" id="submit" placeholder="Enviar:">
+                <input type="reset" name="Reset" id="reset" placeholder="Restablecer:">
+            </form>
+        </section>
+
+    
+        <section class="seccion">
+            <h2>Punto de venta físico</h2>
+            <p>Disponible para nuestra colección Aventura y Punto de retiro:</p>
+            <section>
+                <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.4880136015683!2d-58.39680342481631!3d-34.595978856582135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabdfc191295%3A0x8110084c679e64c0!2sEl%20Ateneo%20Grand%20Splendid!5e0!3m2!1ses!2sar!4v1716211700000!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </section>
+        <section class="resenas">
+  <h2>Reseñas</h2>
+  <div class="grid-resenas">
+    <div class="resena">✨ "Amé el libro, llegó rapidísimo"</div>
+    <div class="resena">📚 "Gran atención, muy recomendado"</div>
+    <div class="resena">💬 "Variedad y buenos precios"</div>
+    <div class="resena">🔖 "Regalé uno y fue un éxito"</div>
+  </div>
+</section>
+
+
+       
+    </main>
+
+
+    <footer>
+  <p>&copy; 2025 La biblioteca. Todos los derechos reservados. <br> Desarrollado por Camila Barletta</p>
+  <div class="redes">
+    <p>Seguinos en redes:</p>
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+  <a href="./index.html" class="volver">Volver al inicio</a>
+</footer>
+
+</body>
+</html>

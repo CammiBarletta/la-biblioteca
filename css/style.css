@@ -1,0 +1,355 @@
+a, button, input {
+  transition: all 0.3s ease;
+}
+
+
+
+h1{
+
+     color: rgb(65, 42, 87);
+     font-size: 50px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --fuente-primaria: 'Roboto', sans-serif;
+}
+
+
+ .roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+header {
+  background-color: rgb(248, 234, 246);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    box-shadow: 0px 0px 10px rgb(156, 146, 146);
+    top: 0px;
+    padding:10px 20px;
+    font-family: var(--fuente-primaria);
+    font-size: 20px;
+    z-index: 20;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   gap: 20px;
+} 
+
+.ImgLogo {
+  width: 200px;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .ImgLogo {
+    width: 150px;
+  }
+}
+
+.presentacion {
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.2s ease;
+
+}
+
+.banner {
+  background-image: url("../img/labiblioteca.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: var(--fuente-primaria);
+  font-size: 70px;
+}
+
+.seccion iframe {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.contenedor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 300px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 450px; /* iguala la altura */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  height: 200px;
+  object-fit: contain;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card .precio {
+  margin-top: auto;
+  font-weight: bold;
+  color: #5c3c92;
+}
+
+
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+
+  .contacto form {
+    padding: 15px;
+  }
+
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.grid-resenas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.resena {
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 6px;
+  font-style: italic;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+section {
+  padding: 20px;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #43246d;
+  transform: scale(1.03);
+}
+
+
+.menu a:hover {
+  color: #9e4b96;
+}
+.menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu li a {
+  padding: 10px 15px;
+}
+.menu i {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+
+.formulario {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #1f1d1d;
+}
+
+
+form button {
+  padding: 10px;
+  background-color: #5c3c92;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    font-weight: bold;
+    padding: 0; 
+  }
+
+  nav ul li a {
+    text-decoration: none;
+  }
+  nav ul li a {
+    color: black; 
+  }
+
+  nav ul li a:hover {
+    color: darkred;
+  }
+    
+
+p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.dudas {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.dudas details {
+  margin-bottom: 20px;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dudas summary {
+  font-weight: bold;
+}
+
+footer {
+  background-color: rgb(211, 179, 206);
+  color: rgb(32, 22, 22);
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 16px;
+}
+
+footer .redes {
+  margin-top: 20px;
+}
+
+footer a {
+  color: rgb(3, 3, 3);
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #1a170d;
+}
+
+footer .volver {
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  footer a {
+    font-size: 20px;
+    margin: 5px;
+  }
+}
+
