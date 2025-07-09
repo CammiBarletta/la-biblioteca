@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <h1>Tienda Online</h1>
+<div id="carrito">
+    <h2>Carrito de Compras</h2>
+    <p>Total: $<span id="total-carrito">0</span></p>
+    <ul id="lista-carrito"></ul>
+</div>
+<hr>
+
+<button id="btnPagar">Pagar</button>
+<button id="vaciar-carrito">Vaciar Carrito</button>
+
+<script src="./js/productos.js"></script>
     <header>
   <img src="img/logobiblioteca.png" alt="Logo de la biblioteca" class="ImgLogo">  
   <nav> 
@@ -29,25 +41,28 @@
   <div class="contenedor-cards">
 
     <div class="card">
-      <img src="img/libro1.jpg" alt="Libro el castillo ambulante">
-      <h3>📖 El castillo ambulante</h3>
-      <p>El castillo ambulante es una novela fantástica de la autora británica Diana Wynne Jones, publicada por primera vez en 1986.</p>
-      <p class="precio">$1500</p>
-    </div>
+  <img src="img/libro1.jpg" alt="Libro el castillo ambulante">
+  <h3>📖 El castillo ambulante</h3>
+  <p>El castillo ambulante es una novela fantástica de la autora británica Diana Wynne Jones, publicada por primera vez en 1986.</p>
+  <p class="precio">$1500</p>
+  <button class="comprar" data-id="1" data-nombre="El castillo ambulante" data-precio="1500">Agregar al carrito</button>
+</div>
 
     <div class="card">
-     <img src="img/libro2.jpg" alt= "Libro La fragilidad de un corazón bajo la lluvia">
-      <h3>📘 La fagrilidad de un corazón bajo la lluvia </h3>
-      <p> Recomendado para amantes del romance</p>
-      <p class="precio">$1500</p>
-    </div>
+  <img src="img/libro2.jpg" alt="Libro La fragilidad de un corazón bajo la lluvia">
+  <h3>📘 La fragilidad de un corazón bajo la lluvia</h3>
+  <p>Recomendado para amantes del romance</p>
+  <p class="precio">$1500</p>
+  <button class="comprar" data-id="2" data-nombre="La fragilidad de un corazón bajo la lluvia" data-precio="1500">Agregar al carrito</button>
+</div>
 
-    <div class="card">
-    <img src="img/libro3.jpg" alt= "Libro El mundo de Estudio Ghibli">
-      <h3>📕 El mundo de Estudio Ghibli</h3>
-      <p>Un clásico para admiradores de Hayao Miyazaki</p>
-      <p class="precio">$1500</p>
-    </div>
+<div class="card">
+  <img src="img/libro3.jpg" alt="Libro El mundo de Estudio Ghibli">
+  <h3>📕 El mundo de Estudio Ghibli</h3>
+  <p>Un clásico para admiradores de Hayao Miyazaki</p>
+  <p class="precio">$1500</p>
+  <button class="comprar" data-id="3" data-nombre="El mundo de Estudio Ghibli" data-precio="1500">Agregar al carrito</button>
+</div>
   </div>
 </section>
 
