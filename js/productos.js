@@ -67,5 +67,17 @@ function pagar() {
 
 // Asignar el evento al botón (cuando el DOM esté listo)
 document.addEventListener('DOMContentLoaded', function() {
+   document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('btnPagar').addEventListener('click', pagar);
+    cargarCarrito(); 
+});
+
+    let btnVaciar = document.getElementById('vaciar-carrito');
+    if (btnVaciar) {
+        btnVaciar.addEventListener('click', function() {
+            localStorage.removeItem('carrito');
+            cargarCarrito();
+        });
+    }
+    cargarCarrito(); // Siempre lo llamamos si hay carrito
 });
