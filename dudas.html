@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
 <body>
-    <header>
+  <header class="header-contenedor">
   <img src="img/logobiblioteca.png" alt="Logo de la biblioteca" class="ImgLogo">  
+
   <nav> 
     <ul class="menu">
       <li><a href="./index.html"><i class="fas fa-home"></i> Inicio</a></li>
@@ -19,7 +20,13 @@
       <li><a href="dudas.html">Dudas</a></li>
     </ul>
   </nav>
+
+  <a href="compra.html" class="carrito-icono">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="contador-carrito">0</span>
+  </a>
 </header>
+
     <main> 
     <section class="dudas">
   <h2>Preguntas Frecuentes</h2>
@@ -48,6 +55,6 @@
   </div>
   <a href="./index.html" class="volver">Volver al inicio</a>
 </footer>
-
+<script src="./js/index.js"></script>
     </body>
 </html>
