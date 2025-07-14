@@ -221,6 +221,24 @@ form button:hover {
   background-color: #43246d;
   transform: scale(1.03);
 }
+.carrito-icono {
+  position: relative;
+  color: #000;
+  font-size: 24px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.carrito-icono #contador-carrito {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: crimson;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
 
 
 .menu a:hover {

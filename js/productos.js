@@ -4,6 +4,15 @@ let botonesComprar = document.getElementsByClassName('comprar');
      botonesComprar[i].addEventListener('click', agregarProducto);
    }
 
+   document.addEventListener('DOMContentLoaded', function() {
+  const contador = document.getElementById('contador-carrito');
+  if (contador) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    contador.textContent = carrito.length;
+  }
+});
+
+
 // Vacía carrito
 document.getElementById('vaciar-carrito').addEventListener('click', function() {
      localStorage.removeItem('carrito');
