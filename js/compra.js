@@ -18,25 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
     resumenDiv.innerHTML = resumenTextoHTML;
 
     function enviarFormulario(event) {
-        event.preventDefault();
+    const nombreContacto = document.getElementById('nombre').value.trim();
+    const emailContacto = document.getElementById('contactoEmail').value.trim();
+    const telefonoContacto = document.getElementById('telefono').value.trim();
 
-        const nombreContacto = document.getElementById('nombre').value.trim();
-        const emailContacto = document.getElementById('contactoEmail').value.trim();
-        const telefonoContacto = document.getElementById('telefono').value.trim();
+    if (!nombreContacto || !emailContacto || !telefonoContacto) {
+        alert("Por favor, completa todos los campos de contacto antes de enviar.");
+        event.preventDefault(); // Detenemos envío si falta info
+        return;
+    }
+    let detallesCarritoParaEnvio = '';
+    for (let i = 0; i < productos.length; i++) {
+        const productoActual = productos[i];
+        detallesCarritoParaEnvio += `${productoActual.nombre} - $${parseFloat(productoActual.precio).toFixed(3)}\n`;
+    }
 
-        if (!nombreContacto || !emailContacto || !telefonoContacto) {
-            alert("Por favor, completa todos los campos de contacto antes de enviar.");
-            return; 
-        }
-
-        let detallesCarritoParaEnvio = '';
-        for (let i = 0; i < productos.length; i++) {
-            const productoActual = productos[i];
-            detallesCarritoParaEnvio += `${productoActual.nombre} - $${parseFloat(productoActual.precio).toFixed(3)}\n`;
-        }
-        console.log("ENVIANDO FORMULARIO CON:");
-        console.log("carritoData:", document.getElementById('carritoData').value);
-        console.log("totalCarrito:", document.getElementById('totalCarrito').value);
+        document.getElementById('carritoData').value = detallesCarritoParaEnvio;
+        document.getElementById('totalCarrito').value = `$${totalFormateado}`;
 
         document.getElementById('carritoData').value = detallesCarritoParaEnvio;
         document.getElementById('totalCarrito').value = `$${totalFormateado}`;
@@ -45,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const botonEnviar = document.getElementById('botonEnviar');
-   
     if (botonEnviar) {
         botonEnviar.addEventListener('click', enviarFormulario);
     } else {
