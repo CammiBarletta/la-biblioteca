@@ -12,6 +12,33 @@ let botonesComprar = document.getElementsByClassName('comprar');
   }
 });
 
+function pagar() {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    if (carrito.length === 0) {
+        alert("El carrito está vacío");
+        return;
+    }
+
+    let total = 0;
+    for (let i = 0; i < carrito.length; i++) {
+        total += parseFloat(carrito[i].precio) || 0;
+    }
+
+    sessionStorage.setItem('productos', JSON.stringify(carrito));
+    sessionStorage.setItem('total', total.toFixed(3));
+
+    // Redirige a la página de compra
+    window.location.href = "compra.html";
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const boton = document.getElementById('btnPagar');
+    if (boton) {
+        boton.addEventListener('click', pagar);
+    }
+});
+
 
 // Vacía carrito
 document.getElementById('vaciar-carrito').addEventListener('click', function() {

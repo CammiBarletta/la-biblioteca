@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const productos = JSON.parse(sessionStorage.getItem('productos')) || [];
+   const productos = JSON.parse(sessionStorage.getItem('productos')) || [];
     const total = sessionStorage.getItem('total') || 0;
     const totalNumerico = parseFloat(total) || 0;
     const totalFormateado = totalNumerico.toFixed(3);
