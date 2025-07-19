@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!nombreContacto || !emailContacto || !telefonoContacto) {
             alert("Por favor, completa todos los campos de contacto antes de enviar.");
-            return; // Detenemos la función si falta algún campo.
+            return; 
         }
 
         let detallesCarritoParaEnvio = '';
@@ -55,3 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
     contador.textContent = carrito.length;
   }
 });
+
+document.getElementById("formulario").addEventListener("submit", function () {
+  alert("¡Gracias por tu compra! Te contactaremos pronto 📚✨");
+});
+

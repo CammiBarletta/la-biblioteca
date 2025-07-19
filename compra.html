@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Compra</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen de Compra</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-    <h1>Resumen de la compra</h1>
-    <main>
-        <section>
-            <div id="detalle"></div>
-        </section>
-    </main>
+  <header class="header-contenedor">
+    <img src="img/logobiblioteca.png" alt="Logo" class="ImgLogo">
+    <a href="index.html" class="volver"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+  </header>
 
-    <footer></footer>
+  <main class="contenedor-compra">
+    <h1>🧾 Resumen de tu compra</h1>
 
-    <form id="formulario" action="acá pega tu dirección de FORMSPREE" method="POST">
-        <textarea id="carritoData" name="carrito" style="display:none;"></textarea>
-        <textarea id="totalCarrito" name="total" style="display:none;"></textarea>
-        <br>
-        <hr>
-        <label>Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
-        <label>Email:</label>
-        <input type="email" id="contactoEmail" name="email" placeholder="Correo electrónico" required>
-        <label>Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
-        <br><br>
-        <button type="submit" id="botonEnviar">Confirmar Compra</button>
+    <section id="detalle" class="resumen-carrito">
+    </section>
+
+    <hr>
+
+    <form id="formulario" action="https://formspree.io/f/mnnzngby" method="POST">
+      <h2>📬 Datos de contacto</h2>
+
+      <input type="hidden" id="carritoData" name="carrito">
+      <input type="hidden" id="totalCarrito" name="total">
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="contactoEmail">Email:</label>
+      <input type="email" id="contactoEmail" name="email" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <button type="submit" id="botonEnviar">✅ Confirmar Compra</button>
     </form>
+  </main>
 
-    <script src="./js/compra.js"></script>
-    <script src="./js/productos.js"></script>
+  <footer>
+    <p>&copy; 2025 La biblioteca. Todos los derechos reservados.</p>
+  </footer>
 
-
+  <script src="./js/compra.js"></script>
+  <script src="./js/productos.js"></script>
 </body>
 </html>
+
