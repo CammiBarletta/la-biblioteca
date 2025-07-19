@@ -388,3 +388,13 @@ footer .volver {
   }
 }
 
+.volver-arriba {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #eee;
+  padding: 0.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
