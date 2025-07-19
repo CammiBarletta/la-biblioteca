@@ -34,9 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const productoActual = productos[i];
             detallesCarritoParaEnvio += `${productoActual.nombre} - $${parseFloat(productoActual.precio).toFixed(3)}\n`;
         }
+        console.log("ENVIANDO FORMULARIO CON:");
+        console.log("carritoData:", document.getElementById('carritoData').value);
+        console.log("totalCarrito:", document.getElementById('totalCarrito').value);
 
         document.getElementById('carritoData').value = detallesCarritoParaEnvio;
         document.getElementById('totalCarrito').value = `$${totalFormateado}`;
+        alert("¡Gracias por tu compra! Te contactaremos pronto 📚✨");
         document.getElementById('formulario').submit();
     }
 
@@ -56,7 +60,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-document.getElementById("formulario").addEventListener("submit", function () {
-  alert("¡Gracias por tu compra! Te contactaremos pronto 📚✨");
-});
 
