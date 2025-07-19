@@ -11,16 +11,6 @@
 </head>
 <body>
     <h1>Tienda Online</h1>
-<div id="carrito">
-    <h2>Carrito de Compras</h2>
-    <p>Total: $<span id="total-carrito">0</span></p>
-    <ul id="lista-carrito"></ul>
-</div>
-<hr>
-
-<button id="btnPagar">Pagar</button>
-<button id="vaciar-carrito">Vaciar Carrito</button>
-
     <header>
   <img src="img/logobiblioteca.png" alt="Logo de la biblioteca" class="ImgLogo">  
   <nav> 
@@ -31,14 +21,22 @@
       <li><a href="dudas.html">Dudas</a></li>
     </ul>
   </nav>
-</header>
-
+  </header>
     <main> 
      <section class="productos">
   <h2>Libros disponibles</h2>
-
+  <section class="carrito-contenedor">
+    <h2>🛒 Tu carrito</h2>
+    <div class="carrito-detalle">
+      <p><strong>Total:</strong> $<span id="total-carrito">0</span></p>
+      <ul id="lista-carrito"></ul>
+      <div class="botones-carrito">
+        <button id="btnPagar" class="btn">Pagar</button>
+        <button id="vaciar-carrito" class="btn btn-secundario">Vaciar Carrito</button>
+      </div>
+    </div>
+  </section>
   <div class="contenedor-cards">
-
     <div class="card">
   <img src="img/libro1.jpg" alt="Libro el castillo ambulante">
   <h3>📖 El castillo ambulante</h3>

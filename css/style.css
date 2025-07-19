@@ -1,8 +1,10 @@
-a, button, input {
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #9e4b96;
+  outline-offset: 2px;
   transition: all 0.3s ease;
 }
-
-
 
 h1{
 
@@ -124,6 +126,7 @@ header {
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.15);
 }
 
 .card img {
@@ -203,6 +206,58 @@ section {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+}
+.carrito-contenedor {
+  background-color: #f9f3fc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: var(--fuente-primaria);
+}
+
+.carrito-detalle ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.botones-carrito {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.boton-agregado {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #5c3c92;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background-color: #432d6b;
+}
+
+.btn-secundario {
+  background-color: #c4b0dd;
+  color: #333;
+}
+
+.btn-secundario:hover {
+  background-color: #a187c7;
 }
 
 .carrito-icono {
@@ -306,22 +361,16 @@ form button:hover {
   background-color: #004ea5;
 }
 
-nav ul {
-    list-style: none;
-    font-weight: bold;
-    padding: 0; 
-  }
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
 
-  nav ul li a {
-    text-decoration: none;
-  }
-  nav ul li a {
-    color: black; 
-  }
+nav ul li a:hover {
+  color: darkred;
+}
 
-  nav ul li a:hover {
-    color: darkred;
-  }
     
 
 p {

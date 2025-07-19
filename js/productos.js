@@ -87,3 +87,7 @@ function pagar() {
 
   window.location.href = "compra.html";
 }
+boton.classList.add("boton-agregado");
+setTimeout(() => {
+  boton.classList.remove("boton-agregado");
+}, 1000);

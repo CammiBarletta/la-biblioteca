@@ -56,5 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
     contador.textContent = carrito.length;
   }
 });
+boton.classList.add("boton-agregado");
+setTimeout(() => {
+  boton.classList.remove("boton-agregado");
+}, 1000);
 
 
