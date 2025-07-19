@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   const contenedorResenas = document.querySelector(".grid-resenas");
 
-  fetch("https://jsonplaceholder.typicode.com/comments?_limit=4")
+  fetch("https://dummyjson.com/comments?limit=4")
     .then((response) => response.json())
     .then((data) => {
-      contenedorResenas.innerHTML = ""; // Limpia las reseñas estáticas
+      contenedorResenas.innerHTML = "";
 
-      data.forEach((comentario) => {
+      data.comments.forEach((comentario) => {
         const div = document.createElement("div");
         div.classList.add("resena");
-        div.textContent = `💬 "${comentario.body}"`;
+        div.textContent = `💬 "${comentario.body}" — ${comentario.user.username}`;
         contenedorResenas.appendChild(div);
       });
     })
