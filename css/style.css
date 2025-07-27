@@ -12,11 +12,6 @@ h1{
      font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-:root {
-  --fuente-primaria: 'Roboto', sans-serif;
-}
-
-
  .roboto {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -24,21 +19,22 @@ h1{
   font-style: normal;
 }
 
-
 header {
-  background-color: rgb(248, 234, 246);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: sticky;
-    box-shadow: 0px 0px 10px rgb(156, 146, 146);
-    top: 0px;
-    padding:10px 20px;
-    font-family: var(--fuente-primaria);
-    font-size: 20px;
-    z-index: 20;
+  background-color: #ede2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  box-shadow: 0px 0px 10px rgb(156, 146, 146);
+  top: 0;
+  padding: 5px 20px; 
+  font-family: var(--fuente-primaria);
+  font-size: 18px; 
+  z-index: 20;
+  min-height: 60px; 
 }
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -55,11 +51,49 @@ header {
   justify-content: space-between;
    gap: 20px;
 } 
+.intro-libros {
+  background-color: #fef6fb;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: var(--fuente-primaria);
+}
+
+.intro-libros h2 {
+  color: #5c3c92;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.intro-libros p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.btn-ver-libros {
+  background-color: var(--color-principal, #9e4b96);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-libros:hover {
+  background-color: var(--color-hover, #6e2c7d);
+}
+
 
 .ImgLogo {
-  width: 200px;
+  width: 140px; 
   max-width: 100%;
 }
+
 @media (max-width: 768px) {
   .ImgLogo {
     width: 150px;
@@ -80,17 +114,22 @@ header {
 
 .banner {
   background-image: url("../img/labiblioteca.png");
-  background-size: cover;
+  background-size: cover; 
   background-position: center;
-  height: 400px;
+  background-repeat: no-repeat;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
   font-family: var(--fuente-primaria);
-  font-size: 70px;
+  font-size: 50px;
+  color: white; 
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4); 
+  padding: 20px;
+  text-align: center;
 }
+
+
 
 .seccion iframe {
   display: block;
@@ -185,7 +224,7 @@ header {
 }
 body {
   font-family: Arial, sans-serif;
-  background-color: #fffaf0;
+  background-color: #fef6fb;
   color: #333;
   margin: 0;
   padding: 0;
@@ -247,16 +286,21 @@ section {
 }
 
 .btn:hover {
-  background-color: #432d6b;
+  background-color: #a679bb
 }
 
 .btn-secundario {
-  background-color: #c4b0dd;
-  color: #333;
+  padding: 10px 20px;
+  border: none;
+  background-color: #5c3c92;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 .btn-secundario:hover {
-  background-color: #a187c7;
+  background-color: #a679bb;
 }
 
 .carrito-icono {
@@ -290,11 +334,13 @@ section {
   padding: 2px 6px;
   font-size: 12px;
 }
-.header-contenedor {
+.contenedor-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
 }
 
 
@@ -360,17 +406,27 @@ form button:hover {
   background-color: #004ea5;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a:hover {
   color: darkred;
 }
 
-    
+
 
 p {
   color: #333;
@@ -396,11 +452,17 @@ p {
 }
 
 footer {
-  background-color: rgb(211, 179, 206);
+  background-color: #ede2f2;
   color: rgb(32, 22, 22);
   text-align: center;
   padding: 30px 10px;
   font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 
 footer .redes {
